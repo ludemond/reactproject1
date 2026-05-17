@@ -1,0 +1,110 @@
+.app-shell {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 40px 20px;
+  background: radial-gradient(circle at top, rgba(104, 99, 255, 0.14), transparent 38%),
+    radial-gradient(circle at right, rgba(56, 189, 248, 0.12), transparent 32%),
+    linear-gradient(180deg, #f8f6ff 0%, #ffffff 100%);
+}
+
+.clock-card {
+  width: min(520px, 100%);
+  padding: 40px;
+  border-radius: 32px;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 34px 90px rgba(15, 23, 42, 0.12);
+  backdrop-filter: blur(18px);
+  position: relative;
+  overflow: hidden;
+}
+
+.clock-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top left, var(--accent-color, #7c3aed) 0%, transparent 35%);
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+.clock-header {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.clock-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: var(--accent-color, #7c3aed);
+  color: white;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+  z-index: 1;
+}
+
+.clock-card h1 {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  font-size: clamp(2.2rem, 3vw, 3.2rem);
+  color: #211e4f;
+}
+
+.clock-date,
+.clock-time,
+.clock-zone,
+.clock-note {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+}
+
+.clock-date {
+  margin-top: 8px;
+  color: #444268;
+  font-size: 1.05rem;
+}
+
+.clock-time {
+  margin-top: 26px;
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  color: var(--accent-color, #7c3aed);
+}
+
+.clock-zone {
+  margin-top: 10px;
+  color: #6f6a92;
+  font-size: 1rem;
+}
+
+.clock-note {
+  margin-top: 28px;
+  padding: 18px 20px;
+  border-radius: 20px;
+  background: rgba(79, 70, 229, 0.06);
+  color: #4338ca;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 640px) {
+  .clock-card {
+    padding: 28px 22px;
+  }
+
+  .clock-time {
+    font-size: clamp(2.4rem, 9vw, 4rem);
+  }
+}
