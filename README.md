@@ -54,25 +54,6 @@ The production-ready files will be placed in the `dist/` directory.
 - `index.html` — Vite entry HTML
 - `README.md` — this file
 
-## Lab Submission Checklist
-
-When you submit this project for the lab, include the following:
-
-- A link to this GitHub repository
-- A short README (this file) with run instructions
-- A screenshot of the running clock (saved as `screenshot.png` in the repo or uploaded to the submission portal)
-
-## Git / Deployment Tips
-
-Add and commit full project files to the repository, then push to your remote:
-
-```bash
-git add .
-git commit -m "Add Color Clock source and styles"
-git push origin main
-```
-
-For a quick static deployment, you can use services like GitHub Pages, Netlify, or Vercel by pointing them to the `dist/` folder produced by `npm run build`.
 
 ## Troubleshooting
 
